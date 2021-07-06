@@ -11,6 +11,10 @@ console.log('jpg:', jpg);
 console.log('ico:', ico);
 console.log('txt:', txt);
 
+import('./A');
+import('./B');
+import('./C');
+
 ReactDom.render(
   <h1>hello4</h1>,
   document.getElementById('root')

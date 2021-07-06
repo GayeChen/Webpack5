@@ -1,0 +1,1 @@
+ npm install webpack@4 webpack-cli@3 webpack-dev-server html-webpack-plugin@3 babel-loader @babel/core @babel/preset-env @babel/preset-react style-loader css-loader -D
