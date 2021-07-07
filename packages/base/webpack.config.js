@@ -16,6 +16,13 @@ module.exports = {
   devServer: {
     port: 8080
   },
+  resolve: {
+    fallback: {
+      "crypto": require.resolve("crypto-browserify"),
+      "stream": require.resolve("stream-browserify"),
+      "buffer": require.resolve("buffer/")
+    }
+  },
   module: {
     rules: [
       {
@@ -33,6 +40,13 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ]
+    } ,
       {
         test: /\.png$/,
         type: 'asset/resource' // 相当于file-loader，输出文件到目录
